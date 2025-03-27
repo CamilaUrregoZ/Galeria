@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@400;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Big Shoulders Stencil', sans-serif;
+    background-color: #fef8e7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+/* Encabezado*/
+
+header {
+    background-color: #f27c22;
+    color: white;
+    padding: 15px;
+    position: relative;
+}
+
+/* Botón de modo oscuro */
+#modo-oscuro-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 8px 4px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff9800;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+#modo-oscuro-toggle:hover {
+    background-color: #d96c1a;
+    transform: scale(1.1);
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #ffe0b2;
+    transform: scale(1.1);
+}
+
+/* Contenido principal */
+
+section {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Galería de imágenes */
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+figure {
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Sección de artistas */
+
+.artista-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.artista {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.artista:hover {
+    transform: scale(1.05);
+}
+
+.artista img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Formulario */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+form:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones */
+button {
+    background-color: #f58220;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d96c1a;
+    transform: scale(1.05);
+}
+
+/* Pie de pagina */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f58220;
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* modo oscuro en distintas secciones */
+
+.dark-mode .exhibicion-item {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .exhibicion-item img {
+    border-bottom: 5px solid #555;
+}
+
+#modo-oscuro {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .obra .overlay {
+    color: white;
+}
+
+.dark-mode .overlay {
+    color: black !important;
+}
+
+/* Obras */
+
+.obra {
+    position: relative;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    background: white;
+    padding-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.obra img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 0.5s;
+}
+
+.obra:hover img {
+    opacity: 0.2;
+}
+
+.overlay {
+    position: absolute;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
+    padding-top: 100px; 
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.obra:hover .overlay {
+    opacity: 1;
+}
+
+
+.info {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: "Big Shoulders Stencil", cursive; /* Ajusta la fuente */
+    transition: 0.3s ease-in-out;
+    color: black !important;
+}
+
+.exhibiciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* contenedores */
+
+.container {
+    position: relative;
+    
+    width: 10%;
+    margin: 0 auto;
+    padding: 0 20px; 
+    overflow: hidden;
+}
+
+.container img {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.container:hover .info {
+    opacity: 0.5; 
+}
+/* Registro */
+.registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px; 
+    margin: 20px auto;
+}
+
+.registro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.registro input,
+.registro select {
+    display: block; 
+    width: calc(100% - 24px);
+    max-width: 350px;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #d78e21;
+    border-radius: 5px;
+    outline: none;
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
+
+
+.registro button {
+    width: 100%;
+    background: #d8791a;
+    color: white;
+    padding: 12px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registro button:hover {
+    background: #b86614;
+}
+
+/* contacto*/
+
+.contacto {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contacto-item {
+    background: white;
+    padding: 1px;
+    border-radius: 70px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.contacto-item img {
+    width: 100px;
+    height: auto;
+}
+
+.contacto-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+.dark-mode #contacto {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .contacto-item {
+    background-color: #333;
+    border-color: #555;
+}
+
+.dark-mode .correo {
+    color: #ddd;
+}

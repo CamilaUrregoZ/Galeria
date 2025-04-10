@@ -8,8 +8,9 @@
     <script>
     function myFunction() {
  
-    document.getElementById("demo").innerHTML = "Enviado"
-}
+    document.getElementById("demo").innerHTML = "Enviado" 
+    event.preventDefault();
+    }
     </script>
 </head>
 <body>
@@ -113,8 +114,8 @@
                 <input type="email" placeholder="Correo Electrónico" required>
                 <input type="telefono" placeholder="Teléfono" required>
                
-                <p id="demo">Procesar datos</p>
-                <button type="submit" onclick="myFunction()">Registrarse</button>
+                
+                <button id="demo" type="submit" onclick="myFunction()">Registrarse</button>
             </form>
         </section>
 
